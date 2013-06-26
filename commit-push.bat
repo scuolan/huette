@@ -7,7 +7,7 @@ echo. >>log.txt
 
 if errorlevel 1 goto failcom
 
-git push origin master >>log.txt 2>&1
+git push origin master 2>>log.txt >>&2
 
 if errorlevel 1 goto failpush
 
