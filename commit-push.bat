@@ -1,13 +1,13 @@
 @echo off
 set /P message=Commit Message: 
 git add .\Baumaterial.xlsx
+git add .\commit-push.bat
 git commit -m "%message%" >log.txt
 echo. >>log.txt
 
 if errorlevel 1 goto failcom
 
-rem Scheint auch mit > zu gehn hab jetzt aber mal doch wieder >> benutzt damit der 2. kanal evtl angehängt wird an den ersten....
-git push origin master >>log.txt 2>>&1
+git push origin master 2>&1 >>log.txt
 
 if errorlevel 1 goto failpush
 
