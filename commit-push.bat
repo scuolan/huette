@@ -1,4 +1,4 @@
-@echo off 
+@echo off
 set /P message=Commit Message: 
 git add .\Baumaterial.xlsx
 git commit -m "%message%" >log.txt
