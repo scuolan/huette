@@ -7,7 +7,7 @@ echo. >>log.txt
 if errorlevel 1 goto failcom
 
 rem  push nutzt nicht den 1. ausgabestrom sondern nur den 2.
-git push --porcelain origin master  2>>log.txt
+git push --verbose origin master  2>>log.txt
 if errorlevel 1 goto failpush
 
 echo.  
